@@ -17,5 +17,15 @@ die();
 }
 
 //functions used to verify request
-
+function ManualIPAuth($AuthorizedIP,$error){
+ $reqIP = $SERVER['REMOTE_ADDR'];
+ if($reqIP != $AuthorizedIP){
+   $errheader = array{
+                  404 => "error404();",
+                  403 => "error403();",
+                  500 => "error500();"}
+  $errheader[$error];
+ }
+ 
+}
 ?>
