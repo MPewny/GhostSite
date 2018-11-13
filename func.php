@@ -51,4 +51,13 @@ function UAAuth($authUA,$error){
   $errheader[$error];
  }
 }
+function BrowserAuth($browser,$error){
+$req = get_browser();
+ if($req['browser'] != $browser){
+           404 => "error404();",
+           403 => "error403();",
+           500 => "error500();"}
+  $errheader[$error];
+ }
+}
 ?>
