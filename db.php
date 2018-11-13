@@ -6,8 +6,7 @@ $dbpass = ""; //User password to the database
 
 $conn = mysqli_connect($dbserver,$dbname,$dblogin,$dbpass);
 
- if($conn){}
- else{
+ if(!$conn){
  die();
  }
   
