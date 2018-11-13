@@ -42,4 +42,13 @@ function AutoIPAuth($error){
   $errheader[$error];
  }
 }
+function UAAuth($authUA,$error){
+ $reqUA = $_SERVER['HTTP_USER_AGENT'];
+ if($reqUA != $authUA){
+           404 => "error404();",
+           403 => "error403();",
+           500 => "error500();"}
+  $errheader[$error];
+ }
+}
 ?>
