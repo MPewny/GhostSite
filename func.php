@@ -17,6 +17,7 @@ die();
 }
 
 //functions used to verify request
+//check if the request IP is equel to the one set manually
 function ManualIPAuth($AuthorizedIP,$error){
  $reqIP = $SERVER['REMOTE_ADDR'];
  if($reqIP != $AuthorizedIP){
@@ -26,6 +27,19 @@ function ManualIPAuth($AuthorizedIP,$error){
                   500 => "error500();"}
   $errheader[$error];
  }
- 
+}
+//check if the request IP is authorized in the database
+function AutoIPAuth($error){
+ include_once 'db.php';
+   $reqIP = $SERVER['REMOTE_ADDR'];
+   $SQL = "SELECT authorized FROM IP_table WHERE IP='".$reqIP."';";
+   $authIP = mysqli_query($conn, $SQL);
+ if(mysql_fetch_row($authIP)) {
+   $errheader = array{
+                  404 => "error404();",
+                  403 => "error403();",
+                  500 => "error500();"}
+  $errheader[$error];
+ }
 }
 ?>
