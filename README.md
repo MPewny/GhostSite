@@ -17,13 +17,11 @@ we all know that some of websites are made only for few of "the chosen ones" ;) 
 [GhostSite](https://github.com/MPewny/GhostSite) is a clear PHP plugin so You dont need to install any frameworks.
 
 ### Main
-above the HTML header of the site that has to be ghosted add this code:
+above the HTML header of the site that has to be ghosted add this ** as PHP code**:
 
-...
-  <?php
-  require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
-  function_You_want_to_use("variables depending of function"); 
-  ?>
+...  
+require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
+function_You_want_to_use("variables depending of function"); 
 ...
 
 What You have to do in "function_You_want_to_use("variables depending of function");" is explained below.
