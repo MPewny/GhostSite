@@ -23,6 +23,7 @@ above the HTML header of the site that has to be ghosted add this ** as PHP code
 
 require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
 function_You_want_to_use("variables depending of function"); 
+
 ...
 
 What You have to do in "function_You_want_to_use("variables depending of function");" is explained below.
