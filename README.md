@@ -17,8 +17,7 @@ we all know that some of websites are made only for few of "the chosen ones" ;) 
 [GhostSite](https://github.com/MPewny/GhostSite) is a clear PHP plugin so You dont need to install any frameworks.
 
 ### Main
-above the HTML header of the site that has to be ghosted add this ** as PHP code**:
-
+above the HTML header of the site that has to be ghosted add this **as PHP code** :
 ...
 
 require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
