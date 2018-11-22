@@ -19,10 +19,12 @@ we all know that some of websites are made only for few of "the chosen ones" ;) 
 ### Main
 above the HTML header of the site that has to be ghosted add this code:
 
->  <?php
->  require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
->  function_You_want_to_use("variables depending of function"); 
->  ?>
+...
+  <?php
+  require_once "path_of_the_GhostSite_plugin/GhostSite/func.php"
+  function_You_want_to_use("variables depending of function"); 
+  ?>
+...
 
 What You have to do in "function_You_want_to_use("variables depending of function");" is explained below.
 
@@ -35,7 +37,7 @@ ManualIPAuth($AuthorizedIP,$error);
 This function allows access **only** to the IP set in $AuthorizedIP variable, if the user that is trying to connect with this site he will see error set in the $error variable.
 
 example
-...php
+...
  //if Your ip is 129.109.48.72, set this code:
   ManualIPAuth("129.109.48.72",404);
 //and if someone with IP else than 129.109.48.72 will get error 404 page not found.
